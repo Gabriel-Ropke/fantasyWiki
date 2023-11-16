@@ -1,0 +1,68 @@
+/* Image */
+div#imgContainer {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 2px solid rgba(var(--fire));
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+div#imgContainer:hover img {
+  scale: 1.2;
+}
+div#imgContainer img {
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease;
+}
+/* Infos */
+main div#infos {
+  max-width: 80%;
+  border: 3px solid var(--secondary-bg-color);
+  background: var(--primary-bg-color);
+  border-radius: 5px;
+}
+main div#infos ul#infoList {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+main div#infos ul#infoList li {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+  padding: 5px 25px 10px 15px;
+}
+main div#infos ul#infoList li span:first-child {
+  color: var(--secondary-text-color);
+  font-size: var(--smaller-size);
+  padding-top: 5px;
+}
+main div#infos ul#infoList li span {
+  color: var(--primary-text-color);
+}
+main div#infos ul#infoList li img {
+  width: 30px;
+  border-radius: 3px;
+}
+amin div#infos ul#infoList li#moveCategory div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main div#infos ul#infoList li#moveType span.type {
+  padding: 0 8px;
+  border-radius: 5px;
+  color: white;
+  cursor: context-menu;
+  text-transform: capitalize;
+}
+/* Back To Top Button */
+button#backToTop div {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--primary-text-color);
+}

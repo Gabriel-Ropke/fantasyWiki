@@ -1,0 +1,347 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+main {
+  width: 100%;
+  min-height: 90vh;
+  background: var(--primary-bg-color);
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0 4px 2px #0005;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+/* Container - Section */
+/** section#tableHeader **/
+section#tableHeader {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  padding: 0.8rem 1rem;
+  z-index: 10;
+}
+section#tableHeader h1 {
+  color: white;
+  font-weight: 500;
+}
+/* Input */
+section#tableHeader div#filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  height: 50px;
+  background: #0001;
+  padding: 0 25px;
+  border-radius: 10px;
+  z-index: 10;
+}
+section#tableHeader div#filterGroup input,
+section#tableHeader div#filterGroup div.select span {
+  display: block;
+  width: 210px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0 10px;
+  transition: 0.2s ease;
+}
+section#tableHeader div#filterGroup div.select {
+  position: relative;
+  cursor: pointer;
+  font-size: var(--small-size);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+section#tableHeader div#filterGroup div.select span {
+  background: white;
+}
+section#tableHeader div#filterGroup div.select span:hover ~ ul {
+  max-height: 200px;
+  visibility: visible;
+}
+section#tableHeader div#filterGroup div.select ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 0px;
+  visibility: hidden;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+section#tableHeader div#filterGroup div.select ul li {
+  padding: 5px 0;
+  background: pink;
+  transition: 0.3s ease;
+}
+section#tableHeader div#filterGroup div.select ul li:hover {
+  filter: brightness(0.9);
+}
+/** section#tableBody**/
+section#tableBody {
+  width: 95%;
+  background-color: var(--secondary-bg-color);
+  margin: 0.8rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* Table */
+main table {
+  width: 100%;
+}
+table,
+td {
+  border-collapse: collapse;
+  padding: 12px 8px;
+}
+th {
+  padding: 10px 4px;
+  transition: 0.2s ease-in;
+  user-select: none;
+  white-space: nowrap;
+  min-width: 80px;
+}
+th:hover {
+  color: var(--max-text-color);
+}
+th:hover svg {
+  fill: var(--max-text-color);
+}
+th.asc svg {
+  fill: var(--max-text-color);
+  rotate: 180deg;
+}
+th svg {
+  fill: var(--primary-text-color);
+  transition: 0.3s ease;
+}
+th span {
+  position: relative;
+  left: 10px;
+}
+table,
+thead th,
+table a {
+  font-size: var(--small-size);
+  font-weight: 400;
+  color: var(--primary-text-color);
+  text-transform: capitalize;
+}
+/* Thead*/
+thead {
+  border-bottom: 2px solid var(--primary-bg-color);
+}
+/* th 
+table thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+*/
+/* Tbody*/
+tbody tr {
+  transition: 0.2s ease-in-out var(--delay), background 0s;
+}
+tbody tr:nth-child(even) {
+  background: #0000000b;
+}
+tbody tr:hover {
+  background: #00000029;
+}
+tbody tr.hidden {
+  opacity: 0;
+  transform: translateX(100%);
+}
+tbody tr td,
+tbody tr p,
+tbody tr td a,
+tbody tr td img {
+  transition: 0.2s ease-in-out;
+}
+tbody tr.hidden td,
+tbody tr.hidden td p,
+tbody tr.hidden td a,
+tbody tr.hidden td span {
+  margin: 0;
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: 0.2s ease-in-out;
+}
+tbody tr.hidden td img {
+  width: 0;
+  height: 0;
+  transition: 0.2s ease-in-out;
+}
+/* td*/
+td {
+  text-align: center;
+}
+td.active,
+td.active a,
+th.active {
+  color: var(--max-text-color);
+  font-weight: 500;
+}
+td.cell-name {
+  white-space: nowrap;
+}
+td img {
+  height: 36px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* a */
+a.hidden-ability {
+  color: var(--secondary-text-color);
+}
+.cell-name a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a:hover {
+  color: var(--secondary-text-color);
+}
+img.full-size {
+  height: 20px;
+}
+a.icon {
+  position: relative;
+  display: inline;
+  white-space: nowrap;
+}
+a.icon .full-size {
+  margin-right: 15px;
+}
+a.icon:hover::before,
+a.icon:hover::after {
+  visibility: visible;
+}
+a.icon::before {
+  content: attr(data-name);
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  width: auto;
+  height: auto;
+  background: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  border-radius: 5px;
+  padding: 2px 5px;
+  border: 2px solid;
+  white-space: nowrap;
+  font-size: var(--smaller-size);
+  visibility: hidden;
+}
+a.icon::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, 14px);
+  border: 5px solid transparent;
+  border-top: 5px solid var(--primary-text-color);
+  visibility: hidden;
+}
+a.icon span {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  letter-spacing: 1px;
+  font-size: var(--smaller-size);
+}
+/* Select */
+div.selectContainer {
+  position: relative;
+  width: 210px;
+  height: 30px;
+}
+div.selectContainer span {
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  background: white;
+  border-radius: 5px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+div.selectContainer ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 0px;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+div.selectContainer ul.active {
+  max-height: 200px;
+}
+div.selectContainer ul li {
+  padding: 5px 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+div.selectContainer ul li:hover {
+  filter: brightness(0.95);
+}
+div.selectContainer .cleanSelector {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-100%, -50%);
+  color: white;
+  background: none;
+  cursor: pointer;
+  visibility: hidden;
+}
+div.selectContainer .cleanSelector.active {
+  visibility: visible;
+}
+/* Img */
+img.radius {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-bg-color);
+}
+img.radius:hover {
+  scale: 1.1;
+}
+.cell-category img {
+  height: 30px;
+}
+/* span */
+td span.coloredbg,
+td a.coloredbg {
+  display: block;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin: 4px 0;
+  font-weight: 400;
+  cursor: context-menu;
+  user-select: none;
+}
+td a.coloredbg {
+  cursor: pointer;
+}
+/* container */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 1000px) {
+  table td.maxWidth {
+    max-width: 370px;
+  }
+}

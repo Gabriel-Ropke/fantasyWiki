@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header_footer.css" />
+    <link rel="stylesheet" href="css/wrappedList.css" />
+    <link rel="stylesheet" href="css/selectedStyle.css" />
+    <link rel="stylesheet" href="css/move.css" />
+    <script type="module" defer src="js/header.js"></script>
+    <script type="module" defer src="js/move.js"></script>
+    <title>Move</title>
+  </head>
+  <body>
+    <header><nav></nav></header>
+    <button id="backToTop"></button>
+    <main>
+      <h1>Move Name</h1>
+      <div id="imgContainer">
+        <img src="" alt="" />
+      </div>
+      <p id="description"></p>
+      <div id="infos">
+        <ul id="infoList">
+          <li id="movePower"><span>Power</span></li>
+          <li id="moveCategory">
+            <span>Category</span>
+            <div>
+              <img src="" alt="" />
+              <span>Special</span>
+            </div>
+          </li>
+          <li id="moveAccuracy">
+            <span>Accuracy</span>
+          </li>
+          <li id="movePP"><span>PP</span></li>
+          <li id="moveType">
+            <span>Type</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul id="pokemonList" class="wrappedList"></ul>
+      </div>
+    </main>
+  </body>
+</html>

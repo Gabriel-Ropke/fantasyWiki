@@ -1,0 +1,11 @@
+import { createHeader } from "./createFunctions/createHeader.js";
+
+createHeader();
+const header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 60) {
+    header.classList.add("active");
+  } else {
+    header.classList.remove("active");
+  }
+});

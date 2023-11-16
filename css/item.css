@@ -1,0 +1,16 @@
+div#imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 125px;
+  background: var(--secondary-bg-color);
+  border-radius: 5px;
+}
+div#imgContainer img {
+  width: 50%;
+  transition: 0.2s;
+}
+div#imgContainer:hover img {
+  scale: 1.2;
+}

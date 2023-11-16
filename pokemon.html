@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/tableStyle.css" />
+    <link rel="stylesheet" href="css/header_footer.css" />
+    <link rel="stylesheet" href="css/selectedStyle.css" />
+    <link rel="stylesheet" href="css/wrappedList.css" />
+    <link rel="stylesheet" href="css/pokemon.css" />
+    <script type="module" defer src="js/header.js"></script>
+    <script
+      type="module"
+      defer
+      src="js/createFunctions/createHeader.js"
+    ></script>
+    <script type="module" defer src="js/pokemon.js"></script>
+    <title>Pokémon</title>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <button id="backToTop"></button>
+    <main>
+      <nav id="navBar">
+        <span id="navName"></span>
+      </nav>
+      <div id="pokemonForms"></div>
+      <div id="typesContainer"></div>
+      <ul id="pokemonInfo">
+        <li id="height" class="small">
+          <h3 class="content-title">Height</h3>
+          <div><span></span></div>
+        </li>
+        <li id="weight" class="small">
+          <h3 class="content-title">weight</h3>
+          <div><span></span></div>
+        </li>
+
+        <li id="species" class="small">
+          <h3 class="content-title">Species</h3>
+          <div><span></span></div>
+        </li>
+        <li id="abilities">
+          <h3 class="content-title">Abilities</h3>
+          <div></div>
+        </li>
+        <li id="gender">
+          <h3 class="content-title">Gender</h3>
+          <div></div>
+        </li>
+        <li id="evYield">
+          <h3 class="content-title">EV Yield</h3>
+          <div></div>
+        </li>
+        <li id="eggGroups">
+          <h3 class="content-title">Egg Groups</h3>
+          <div></div>
+        </li>
+      </ul>
+      <ul id="weaknesses"></ul>
+      <ul id="evolutionary"></ul>
+      <div>
+        <ul id="dropList" class="wrappedList"></ul>
+      </div>
+      <div id="status"></div>
+      <div id="tableContainer"></div>
+    </main>
+  </body>
+</html>
