@@ -7,50 +7,111 @@
     <link rel="stylesheet" href="css/header_footer.css" />
     <link rel="stylesheet" href="css/home.css" />
     <script type="module" defer src="js/home.js"></script>
-    <script defer src="js/header.js"></script>
     <title>Home</title>
   </head>
   <body>
     <header>
       <nav>
-        <a href="" id="logo">
-          <img src="img/general/logo(substitute).png" alt="" />
-        </a>
-        <a id="home" href="#home"> Home </a>
-        <div id="informative">
-          <span>Informativos</span>
-          <ul>
-            <li><a href="evseivs.html">O que são IV's e EV's?</a></li>
-            <li><a href="#">O que são as Fraquezas?</a></li>
-            <li><a href="#">Como saber a melhor Nature?</a></li>
-          </ul>
-        </div>
-        <div>
-          <span>Listas</span>
-          <ul>
-            <li><a href="pokedex.html">Pokédex</a></li>
-            <li><a href="#">Moves</a></li>
-            <li><a href="#">Items</a></li>
-            <li><a href="#">Abilities</a></li>
-            <li><a href="#">Quests</a></li>
-          </ul>
-        </div>
-        <div style="display: none">
-          <span>Games</span>
-          <ul>
-            <li>Ekans Game</li>
-            <li>Rayquaza Invaders</li>
-            <li>Super Marill</li>
-          </ul>
-        </div>
+        <a href="#whatWikiHasSection">Conteudo</a>
+        <a href="#newsSection">News</a>
+        <a href="#whoAre">Quem Somos</a>
       </nav>
-      <div id="switchMode">
-        <img src="img/general/dark-mode-icon.png" alt="" />
-      </div>
     </header>
     <main>
-      <section id="news"></section>
-      <section id="pokemonCarousel"></section>
+      <div id="parallaxImageContainer">
+        <img src="img/general/home_bg.jpg" alt="" />
+        <h1>Pokefantasy Wiki</h1>
+      </div>
+      <section id="whatWikiHasSection">
+        <h2>Conteudos da Wiki</h2>
+      </section>
+      <section id="newsSection">
+        <h2>News</h2>
+        <ul id="newsList">
+          <li class="new">
+            <a href="#">
+              <div class="imageContainer">
+                <img src="img/general/ivs-image.webp" alt="" />
+              </div>
+              <div class="textContainer">
+                <h3>Uma batata esta quente</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias commodi, distinctio ipsum quos cum, nulla obcaecati,
+                  sed repellendus esse ipsa sint accusamus. Sapiente tenetur
+                  asperiores veniam sed earum. Eos, velit!
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="new">
+            <a href="#">
+              <div class="imageContainer">
+                <img src="img/general/ivs-image.webp" alt="" />
+              </div>
+              <div class="textContainer">
+                <h3>Uma batata esta quente</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias commodi, distinctio ipsum quos cum, nulla obcaecati,
+                  sed repellendus esse ipsa sint accusamus. Sapiente tenetur
+                  asperiores veniam sed earum. Eos, velit!
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="new">
+            <a href="#">
+              <div class="imageContainer">
+                <img src="img/general/ivs-image.webp" alt="" />
+              </div>
+              <div class="textContainer">
+                <h3>Uma batata esta quente</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias commodi, distinctio ipsum quos cum, nulla obcaecati,
+                  sed repellendus esse ipsa sint accusamus. Sapiente tenetur
+                  asperiores veniam sed earum. Eos, velit!
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="new">
+            <a href="#">
+              <div class="imageContainer">
+                <img src="img/general/ivs-image.webp" alt="" />
+              </div>
+              <div class="textContainer">
+                <h3>Uma batata esta quente</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias commodi, distinctio ipsum quos cum, nulla obcaecati,
+                  sed repellendus esse ipsa sint accusamus. Sapiente tenetur
+                  asperiores veniam sed earum. Eos, velit!
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section id="whoAre">
+        <h2>Quem somos?</h2>
+        <ul id="whoList">
+          <li id="froga">
+            <div class="imgContainer">
+              <img src="img/moves/ember.jpg" alt="" />
+            </div>
+            <h4>Froga - Developer</h4>
+            <span>Froga#3333</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+              inventore nulla enim distinctio corrupti autem, laboriosam illum
+              dolorum similique explicabo excepturi, provident iste ea
+              recusandae repellat a ad repellendus unde.
+            </p>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer></footer>
   </body>

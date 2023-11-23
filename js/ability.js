@@ -1,9 +1,11 @@
 import { allAbilities, allPokemon } from "./database/codedb.js";
 import { getByIDSearch } from "./database/getidparams.js";
+import { backToTop } from "./selectedScript.js";
 
 const Ability = getByIDSearch({ database: allAbilities });
 console.log(Ability);
-
+// Back To Top Button
+backToTop({ name: Ability.name });
 // Ability Info
 
 const h1Title = document.querySelector("main h1");

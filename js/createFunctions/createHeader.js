@@ -1,5 +1,52 @@
 import { getObjectLength } from "./internalFunctions.js";
 
+// Objeto com todas as listas
+export const HeaderObjects = {
+  informatives: {
+    id: "informative",
+    title: "informatives",
+    items: [
+      {
+        title: "o que são iv's e ev's?",
+        href: "evseivs.html",
+      },
+      {
+        title: "o que são as Fraquezas",
+        href: "#",
+      },
+      {
+        title: "como saber a melhor nature",
+        href: "#",
+      },
+    ],
+  },
+  lists: {
+    id: "list",
+    title: "lists",
+    items: [
+      {
+        title: "pokedex",
+        href: "pokedex.html",
+      },
+      {
+        title: "abilities",
+        href: "abilities.html",
+      },
+      {
+        title: "moves",
+        href: "moves.html",
+      },
+      {
+        title: "quests",
+        href: "quests.html",
+      },
+      {
+        title: "items",
+        href: "items.html",
+      },
+    ],
+  },
+};
 export function createHeader() {
   const Body = document.body;
   const headerContainer = document.querySelector("header");
@@ -11,57 +58,10 @@ export function createHeader() {
   aHome.id = "home";
   aHome.innerText = "home";
   navContainer.appendChild(aHome);
-  // Objeto com todas as listas
-  const liObjects = {
-    informatives: {
-      id: "informative",
-      title: "informatives",
-      items: [
-        {
-          title: "o que são iv's e ev's?",
-          href: "evseivs.html",
-        },
-        {
-          title: "o que são as Fraquezas",
-          href: "#",
-        },
-        {
-          title: "como saber a melhor nature",
-          href: "#",
-        },
-      ],
-    },
-    lists: {
-      id: "list",
-      title: "lists",
-      items: [
-        {
-          title: "pokedex",
-          href: "pokedex.html",
-        },
-        {
-          title: "moves",
-          href: "moves.html",
-        },
-        {
-          title: "items",
-          href: "items.html",
-        },
-        {
-          title: "abilities",
-          href: "abilities.html",
-        },
-        {
-          title: "quests",
-          href: "quests.html",
-        },
-      ],
-    },
-  };
   // Cria as Listas
-  for (let i = 0; i < getObjectLength(liObjects); i++) {
-    const listId = Object.keys(liObjects)[i];
-    const list = liObjects[listId];
+  for (let i = 0; i < getObjectLength(HeaderObjects); i++) {
+    const listId = Object.keys(HeaderObjects)[i];
+    const list = HeaderObjects[listId];
     let divContainer = document.createElement("div");
     let ulContainer = document.createElement("ul");
     let spanTitle = document.createElement("span");

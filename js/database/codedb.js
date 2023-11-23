@@ -485,6 +485,7 @@ export const allAbilities = {
     id: 1,
     name: "Levitate",
     description: "Imune a movimentos de tipo Terra",
+    effect: "ground imunity",
     pokemon: [2, 3],
   },
   2: {

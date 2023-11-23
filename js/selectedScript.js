@@ -1,12 +1,15 @@
 export function backToTop({ imgSource, name }) {
   const backToTop = document.querySelector("button#backToTop");
-  let img = document.createElement("img");
-  img.src = imgSource;
-  let imgContainer = document.createElement("div");
-  imgContainer.appendChild(img);
+  if (imgSource) {
+    let imgContainer = document.createElement("div");
+    let img = document.createElement("img");
+    img.src = imgSource;
+    imgContainer.appendChild(img);
+    backToTop.appendChild(imgContainer);
+  }
   let h3Name = document.createElement("h3");
   h3Name.innerText = name;
-  backToTop.append(imgContainer, h3Name);
+  backToTop.appendChild(h3Name);
   backToTop.onclick = () => {
     window.scrollTo({ top: 0 });
   };
