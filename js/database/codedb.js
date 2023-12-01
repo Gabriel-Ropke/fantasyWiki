@@ -94,196 +94,6 @@ export const allPokemon = {
       },
     ],
   },
-  2: {
-    id: 2,
-    name: "ivysaur",
-    dex: "002",
-    evoline: 1,
-    images: {
-      tableImage: "img/sprites/ivysaur.png",
-      normalImage: "img/sprites/ivysaur-info-normal.png",
-      shinyImage: "img/sprites/ivysaur-info-shiny.png",
-    },
-    info: {
-      height: "1.0m",
-      weight: "13.7kg",
-      species: "Bulb Pokemon",
-      types: [5, 8],
-      abilities: [1, 2],
-      gender: [
-        {
-          name: "male",
-          probability: "75%",
-        },
-        {
-          name: "female",
-          probability: "25%",
-        },
-      ],
-      evYield: [
-        {
-          name: "sp. atk",
-          value: "1",
-        },
-      ],
-      eggGroups: ["monster", "humanoid"],
-    },
-    status: {
-      hp: 45,
-      def: 49,
-      atk: 49,
-      spatk: 65,
-      spdef: 65,
-      speed: 45,
-      total: 318,
-    },
-    drops: [
-      {
-        id: 1,
-        quantity: {
-          min: 1,
-          max: 3,
-        },
-      },
-      {
-        id: 2,
-        quantity: {
-          min: 2,
-          max: 5,
-        },
-      },
-    ],
-    moves: [
-      {
-        id: 1,
-        level: 5,
-      },
-      {
-        id: 2,
-        level: 7,
-      },
-    ],
-    locations: [
-      {
-        id: 2,
-        levels: {
-          min: 7,
-          max: 15,
-        },
-      },
-    ],
-    dungeons: [
-      {
-        id: 1,
-        levels: {
-          min: 7,
-          max: 23,
-        },
-      },
-      {
-        id: 1,
-        levels: {
-          min: 7,
-          max: 23,
-        },
-      },
-    ],
-  },
-  3: {
-    id: 3,
-    name: "venusaur",
-    dex: "003",
-    evoline: 1,
-    images: {
-      tableImage: "img/sprites/venusaur.png",
-      normalImage: "img/sprites/venusaur-info-normal.png",
-      shinyImage: "img/sprites/venusaur-info-shiny.png",
-    },
-    info: {
-      height: "1.0m",
-      weight: "13.7kg",
-      species: "Bulb Pokemon",
-      types: [5, 8],
-      abilities: [1, 2],
-      gender: [
-        {
-          name: "male",
-          probability: "75%",
-        },
-        {
-          name: "female",
-          probability: "25%",
-        },
-      ],
-      evYield: [
-        {
-          name: "sp. atk",
-          value: "1",
-        },
-      ],
-      eggGroups: ["monster", "humanoid"],
-    },
-    status: {
-      hp: 45,
-      def: 49,
-      atk: 49,
-      spatk: 65,
-      spdef: 65,
-      speed: 45,
-      total: 318,
-    },
-    drops: [
-      {
-        id: 1,
-        quantity: {
-          min: 1,
-          max: 3,
-        },
-      },
-      {
-        id: 2,
-        quantity: {
-          min: 2,
-          max: 5,
-        },
-      },
-    ],
-    moves: [
-      {
-        id: 1,
-        level: 5,
-      },
-      {
-        id: 2,
-        level: 7,
-      },
-    ],
-    locations: [
-      {
-        id: 2,
-        levels: {
-          min: 7,
-          max: 15,
-        },
-      },
-    ],
-    dungeons: [
-      {
-        id: 1,
-        levels: {
-          min: 7,
-          max: 23,
-        },
-      },
-      {
-        id: 1,
-        levels: {
-          min: 7,
-          max: 23,
-        },
-      },
-    ],
-  },
 };
 export const allEvoline = {
   1: {
@@ -979,5 +789,74 @@ export const allWeakness = {
       steel: 0.5,
       fairy: 1,
     },
+  },
+};
+// Users
+export const allUsers = {
+  1: {
+    id: 1,
+    name: "Froga",
+    work: "developer",
+    discordID: ".froga",
+    imgSource: "img/whoare/Froga.webp",
+    history: "Daqui pra frente é só pra trás",
+  },
+  2: {
+    id: 2,
+    name: "EstadualBoy",
+    work: "Fisher",
+    discordID: "estadualboy",
+    imgSource: "img/whoare/estadualboy.webp",
+    history: "As vezes Slow, mas sempre Poke",
+  },
+  3: {
+    id: 3,
+    name: "Dantas",
+    work: "Dantas",
+    discordID: "dantas5184",
+    imgSource: "img/whoare/dantas.webp",
+    history: "Não gosto de Frases",
+  },
+  4: {
+    id: 4,
+    name: "Lucazao",
+    work: "Lucazao",
+    discordID: "lucazao",
+    imgSource: "img/whoare/Lucazao.webp",
+    history: "Sexo é bom!",
+  },
+};
+export const allNews = {
+  1: {
+    id: 1,
+    title: "Ta pegando fogo bicho!",
+    description:
+      "Um pikachu foi visto na Viridian Forest pegando fogo, suspeita-se que o mesmo foi queimado durante uma batalha contra um Charizard, onde saiu vitorioso.",
+    imgSource: "img/news/ta_pegando_fogo_bicho.webp",
+    href: "#",
+  },
+  2: {
+    id: 2,
+    title: "Miltank odeia idosas?",
+    description:
+      "Uma Miltank fugiu de uma Fazenda e está causando o Caos na cidade! 'Miltank, Miltank!' Disse ela, após bater em uma idosa",
+    imgSource: "img/news/mitalnk.jpg",
+    href: "#",
+  },
+  3: {
+    id: 3,
+    title: "Dragonite Gigante",
+    description:
+      "Um Dragonite gigante foi visto ao norte de Cerulean, segundo as lendas de 500 anos atrás, este Dragonite é realmente gigante.",
+    imgSource: "img/news/dragonite.webp",
+    href: "#",
+  },
+  4: {
+    id: 4,
+    title: "Fantasmas existem?",
+    description:
+      "Foi visto, durante o dia, um Gengar rindo do nada, testemunhas temem que ele tenha visto um Fantasma.",
+    imgSource: "img/news/gengar.png",
+    href: "#",
   },
 };

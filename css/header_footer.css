@@ -1,3 +1,4 @@
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -56,6 +57,7 @@ header nav div span {
   display: flex;
   align-items: center;
   height: 100%;
+  width: 100%;
   text-transform: capitalize;
   font-size: var(--medium-size);
   font-weight: 500;
@@ -118,4 +120,119 @@ header div#switchMode img {
 }
 body.light header div#switchMode img {
   left: 0;
+}
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  width: 100%;
+  padding: 30px 20px;
+  background: var(--primary-bg-color);
+}
+footer span#developedByFroga {
+  position: relative;
+  padding-top: 50px;
+  font-size: var(--small-size);
+  color: var(--secondary-text-color);
+}
+footer span#developedByFroga::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: var(--secondary-text-color);
+}
+/* Media Query */
+@media (max-width: 550px) {
+  header div#switchMode {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  header {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    top: 20px;
+    left: 20px;
+    padding: 0;
+    visibility: hidden;
+  }
+  header.active {
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 150px;
+    visibility: visible;
+    box-shadow: 149px 0 0 0 rgba(0, 0, 0, 0.3), 150px 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  header nav {
+    flex-flow: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-top: 140px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  header nav div {
+    width: 100%;
+    max-height: 100px;
+  }
+  header nav div ul {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+  }
+  header nav div span {
+    padding: 0;
+    justify-content: center;
+  }
+  header.active nav {
+    visibility: visible;
+    opacity: 1;
+  }
+  div#menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-bg-color);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 101;
+  }
+  div#menu span#menuIcon,
+  div#menu span#menuIcon::before,
+  div#menu span#menuIcon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 30px;
+    height: 6px;
+    background: var(--primary-text-color);
+  }
+  div#menu span#menuIcon::before,
+  div#menu span#menuIcon::after {
+    content: "";
+    position: relative;
+    top: 12px;
+  }
+  div#menu span#menuIcon::after {
+    top: -12px;
+  }
+  header div#switchMode {
+    display: block;
+    right: 50%;
+    top: calc(100% - 20px);
+    transform: translate(50%, -100%);
+  }
 }
