@@ -822,8 +822,8 @@ export const allUsers = {
     name: "Lucazao",
     work: "Lucazao",
     discordID: "lucazao",
-    imgSource: "img/whoare/Lucazao.webp",
-    history: "Sexo é bom!",
+    imgSource: "img/whoare/lucazao.webp",
+    history: "Bazinga!",
   },
 };
 export const allNews = {
